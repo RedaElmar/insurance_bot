@@ -1,0 +1,88 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- greet
+- bye
+- inform_puissance
+- inform_genre
+- inform_carburant
+- inform_name
+entities:
+- name
+- puissance
+- carburant
+- genre
+slots:
+  carburant:
+    type: unfeaturized
+  genre:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  puissance:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Bonjour 👋,
+  - text: Salut 👋,
+  - text: Salam 👋,
+  utter_ask_name:
+  - buttons:
+    - payload: '/inform_name{"name": "anonyme"}'
+      title: je reste anonyme
+    text: puis-je avoir votre nom ? Cela nous aide à faire connaissance .
+  utter_welcome:
+  - text: Enchanté de vous rencontrer {name} !
+  utter_intro:
+  - text: Afin de vous aider à estimer votre montant d'assurance,  je vais devoir
+      vous poser quelques questions sur votre véhicule.
+  utter_ask_puissance:
+  - text: Quelle est la puissance fiscale de votre véhicule ?
+  utter_ask_carburant:
+  - buttons:
+    - payload: '/inform_carburant{"carburant": "Diesel"}'
+      title: Diesel
+    - payload: '/inform_carburant{"carburant": "Essence"}'
+      title: Essence
+    - payload: '/inform_carburant{"carburant": "Electrique"}'
+      title: Electrique
+    text: Excellent! Quel-est le type de carburant de votre voiture ?
+  utter_ask_genre:
+  - buttons:
+    - payload: '/inform_genre{"genre": "homme"}'
+      title: Homme
+    - payload: '/inform_genre{"genre": "femme"}'
+      title: Femme
+    text: Parfait ! Une dernière question, est que vous êtes un homme ou une femme
+      ?
+  utter_submit:
+  - text: '{name},vous etes un(e) {genre},la puissance fiscale de votre vehicule est
+      {puissance}, et votre carburant est {carburant}'
+  utter_wrong_puissance:
+  - text: Veuillez entrer un chiffre entre 1 et 21 !
+  utter_wrong_genre:
+  - text: Connaitre votre sexe m'aidera à mieux estimer vos frais d'assurances. Pourriez-vous
+      s'il vous plaît taper "Homme" ou "Femme" pour que je puisse vous comprendre
+      ?
+  utter_wrong_carburant:
+  - text: Merci de choisir une des propositions
+  utter_anon:
+  - text: Pas de soucis !
+actions:
+- utter_greet
+- utter_ask_name
+- utter_welcome
+- utter_intro
+- utter_ask_puissance
+- utter_ask_carburant
+- utter_ask_genre
+- utter_submit
+- utter_wrong_puissance
+- utter_wrong_genre
+- utter_wrong_carburant
+- utter_anon
+forms:
+- info_form
