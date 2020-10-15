@@ -36,10 +36,15 @@
 - [Aymane El Khattabi](name)
 - [Hatim Ammor](name)
 - [Lionel Messi](name)
+- [Tarik Bakkali](name)
+- [Hamid El Alaoui El Mdaghri](name)
+- [Amine Kachkach](name)
 
 ## intent:inform_genre
 - [homme](genre)
 - [femme](genre)
+- je suis un [homme](genre) 
+- je suis une [femme](genre)
 
 ## intent:inform_carburant
 - [Essence](carburant)
@@ -47,6 +52,7 @@
 - [Electrique](carburant)
 - [Diesel](carburant) pure
 - neon
+- kerosene
 
 ## intent:inform_puissance
 - [12](puissance) cheveaux
@@ -61,3 +67,6 @@
 - [43](puissance) cv
 - [20](puissance)
 - [21](puissance) chvx
+- [7](puissance) cheveaux
+- [677](puissance)
+- [23](puissance) cvx

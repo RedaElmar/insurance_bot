@@ -26,9 +26,9 @@ slots:
     type: unfeaturized
 responses:
   utter_greet:
-  - text: Bonjour 👋,
-  - text: Salut 👋,
-  - text: Salam 👋,
+  - text: Bonjour ,
+  - text: Salut ,
+  - text: Salam ,
   utter_ask_name:
   - buttons:
     - payload: '/inform_name{"name": "anonyme"}'
@@ -59,8 +59,8 @@ responses:
     text: Parfait ! Une dernière question, est que vous êtes un homme ou une femme
       ?
   utter_submit:
-  - text: '{name},vous etes un(e) {genre},la puissance fiscale de votre vehicule est
-      {puissance}, et votre carburant est {carburant}'
+  - text: '{name},vous etes "{genre}",la puissance fiscale de votre vehicule est "{puissance}
+      cheveaux", et votre carburant est "{carburant}". "validation réussite"'
   utter_wrong_puissance:
   - text: Veuillez entrer un chiffre entre 1 et 21 !
   utter_wrong_genre:
