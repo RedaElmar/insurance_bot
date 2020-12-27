@@ -9,28 +9,11 @@ import subprocess
 from gtts import gTTS
 import json
 
-
-
-
-"""
-data = json.dumps({"sender": "Rasa","message": "salut"})
-headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-res = requests.post('http://localhost:5005/webhooks/rest/webhook', data= data, headers = headers)
-res = res.json()
-val = res[0]['text']
-
-print(val)
-"""
-
 bot_message = ""
 message=""
-
-
 r = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message": "Salut","Sender": "rasa" })
-
-
-
 bot_messages =[]
+
 for i in r.json(): #it gives error here
     bot_messages += [i['text'],]
     #print(f"{bot_message}")
