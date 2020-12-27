@@ -65,7 +65,6 @@
     - slot{"requested_slot":null}
 
 ## New Story
-
 * greet
     - utter_greet
     - info_form
